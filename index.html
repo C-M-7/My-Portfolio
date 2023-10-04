@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="mediaqueries.css" />
+  </head>
+  <body>
+    <nav id="desktop-nav">
+      <div class="logo">Developer</div>
+      <div>
+        <ul class="nav-items">
+          <li><a href="#Home">Home</a></li>
+          <li><a href="#Education">Education</a></li>
+          <li><a href="#Projects">Projects</a></li>
+          <li><a href="#Contact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+    <nav id="hamburger-nav">
+      <div class="logo">Developer</div>
+      <div class="hamburger-menu">
+        <div class="hamburger-icon" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="menu-links">
+          <li><a href="#Home" onclick="toggleMenu()">Home</a></li>
+          <li><a href="#Education" onclick="toggleMenu()">Education</a></li>
+          <li><a href="#Projects" onclick="toggleMenu()">Projects</a></li>
+          <li><a href="#Contact" onclick="toggleMenu()">Contact</a></li>
+        </div>
+      </div>
+    </nav>
+    <section id="profile">
+      <div class="profile-picture">
+        <img
+          src="/images/me1.jpeg"
+          alt="Chiranjeev's picture"
+          class="cm7-pic"
+        />
+      </div>
+      <div class="profile-text">
+        <p class="profile-greet">Hello I'm</p>
+        <h1 class="profile-title">Chiranjeev</h1>
+        <h3 class="profile-main">
+          <span
+            class="typer"
+            id="first-typer"
+            data-words="FrontEnd Developer, 
+                Problem Solver, Learner"
+            data-colors=""
+          ></span>
+          <span class="cursor" data-owner="first-typer"></span>
+        </h3>
+        <div class="profile-btn">
+          <button
+            class="btn btn-color-2"
+            onclick="window.open('Chiranjeev_Marwaha_FE.pdf')"
+          >
+            Download CV
+          </button>
+        </div>
+        <div id="social-container">
+          <img
+            src="/images/linkedin-fill.png"
+            alt="Linkedin logo"
+            class="icon"
+            onclick="location.href='https://www.linkedin.com/in/cm0073/'"
+          />
+          <img
+            src="images/github-fill.png"
+            alt="Github logo"
+            class="icon"
+            onclick="location.href='https://github.com/C-M-7'"
+          />
+        </div>
+      </div>
+    </section>
+    <section id="Education">
+      <div class="edu-title"><h1>Education</h1></div>
+      <div class="card-container">
+        <div class="card" id="pec">
+          <h1 class="edu-degree">B.Tech in Electrical Engineering</h1>
+          <h3 class="institutes">Punjab Engineering College, CHD</h3>
+          <h1 class="edu-duration">2021-2025</h1>
+          <h4 class="cg">CGPA : 7.46</h4>
+        </div>
+        <div class="card" id="school">
+          <h1 class="edu-degree">Senior Secondary Education</h1>
+          <h3 class="institutes">M.D.A.V Public School, Ambala</h3>
+          <h1 class="edu-duration">2018-2020</h1>
+          <h4 class="cg">Percentage : 93.2%</h4>
+        </div>
+        <div class="card" id="school">
+          <h1 class="edu-degree">Higher Education</h1>
+          <h3 class="institutes">M.D.A.V Public School, Ambala</h3>
+          <h1 class="edu-duration">2017-2018</h1>
+          <h4 class="cg">Percentage : 86.8%</h4>
+        </div>
+      </div>
+    </section>
+    <section id="Projects">
+        <h1 class="project-title">Projects</h1>
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="project-card">
+                <h2><a href="https://github.com/C-M-7/My-Portfolio">My Portfolio</a></h2>
+                <ul>                  
+                  <li>Created a dynamic portfolio using HTML, CSS, and JavaScript.</li>
+                  <li>Structured content to showcase projects and skills effectively, employing CSS for appealing presentation.</li>
+                  <li>Use of Remixicon for deploying icons for various skills.</li>
+                  <li>Technologies Used - HTML, CSS, Javascript.</li>
+                </ul>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="project-card">
+                <h2><a href="https://github.com/C-M-7/Happy-Sad-Model">Happy Sad Model</a></h2>
+                <ul>
+                  <li>A model which classifies the sentiments of image as Happy or Sad.</li>
+                  <li>Use of google's happy/sad images zip for training model.</li>
+                  <li>Use of Sequential Model in neural networks.</li>
+                  <li>Technologies used - TensorFlow, CNN, OpenCV.</li>
+                </ul>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="project-card">
+                <h2><a href="https://github.com/C-M-7/Titanic_Disaster_Predictor">Titanic Disaster</a></h2>
+                <ul>
+                  <li>Created a Supervised Learning model predicting chances of survival of people onboard.</li>
+                  <li>Improvement of model accuracy from 68.7% to 80.3%.</li>
+                  <li>Also learnt some basics about XGBooster Model.</li>
+                  <li>Models Used - Decision Trees, GridSearchCV.</li>
+                </ul>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </section>
+    <footer id="Contact">
+      <h1>Contact Me</h1>
+      <section class="contact-me">
+        <div class="mail-me">
+          <h4>chiranm007@gmail.com</h4>
+        </div>
+        <div class="phone">
+          <p>+91-7988684395</p>
+        </div>
+        <div class="address">
+          <p>Haryana, India</p>
+        </div>
+      </section>
+    </footer>
+
+    <script async src="https://unpkg.com/typer-dot-js@0.1.0/typer.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+          direction: "vertical",
+          pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+          },
+        });
+      </script>
+    <script src="main.js"></script>
+  </body>
+</html>

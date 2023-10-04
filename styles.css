@@ -1,0 +1,465 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+/* Transition */
+a,
+.btn{
+transition: all 300ms ease;    
+}
+
+/* Desktop Nav */
+nav, .nav-items{
+    display: flex;
+}
+
+nav{
+    justify-content: space-around;
+    height: 17vh;
+    align-items: center;
+    /* background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), white  ); */
+}
+
+/* nav:hover{
+    transition: 10s;
+    background-image: linear-gradient(to top, white,  rgba(0, 0, 0, 0.6) );
+} */
+
+.nav-items{
+    gap: 5rem;
+    list-style: none;
+    font-size: 1.5rem;
+}
+
+a{
+    color: black;
+    text-decoration: none;
+    transition: 0.2s;
+    padding: 0px 5px;
+}
+
+a:hover{
+    /* color: red; */
+    transition: 0.5s;
+    color: white;
+    background-color: black;
+    border-radius: 7px;
+}
+
+.logo{
+    position: relative;
+    font-size: 2.7rem;
+    font-weight: bold;
+}
+
+.logo::before{
+    position: absolute;
+    content: 'Learning';
+    color: rgba(0, 0, 0, 0.005);
+    padding: 0px 10px;
+}
+
+.logo:hover{
+    transition: 0.2s;
+    cursor: default;
+    color: rgba(0, 0, 0, 0);
+}
+
+.logo:hover:before{
+    color: white;
+    transition: 0.5s;
+    background-color: black;
+    border-radius: 10px;
+}
+
+/* HAMBURGER MENU */
+#hamburger-nav {
+    display: none;
+  }
+  
+  .hamburger-menu {
+    position: relative;
+    display: inline-block;
+  }
+  
+/* The hamburger icon */
+  .hamburger-icon {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 24px;
+    width: 30px;
+    cursor: pointer;
+  }
+  
+  .hamburger-icon span {
+    /* width: 100%; */
+    height: 3px;
+    background-color: black;
+    transition: all 0.3 ease-in-out;
+  }
+  
+/* DROPDOWN MENU */
+  .menu-links {
+    position: absolute;
+    top: 100%;
+    right: 20px;
+    background-color: black;
+    border-radius: 15px;
+    width: fit-content;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.5s ease-in-out;
+  }
+  
+.menu-links a {
+  display: block;
+  padding: 10px;
+  text-align: center;
+  font-size: 1.5rem;
+  color: white;
+  /* text-decoration: underline; */
+  transition: all 0.5s ease-in-out;
+}
+  
+.menu-links li {
+  list-style: none;
+}
+  
+.menu-links.open {
+  max-height: 300px;
+}
+  
+.hamburger-icon.open span:first-child {
+  transform: rotate(45deg) translate(10px, 5px);
+  transition: all 0.3s ease-in-out;
+}
+  
+.hamburger-icon.open span:nth-child(2) {
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+}
+  
+.hamburger-icon.open span:last-child {
+  transform: rotate(-45deg) translate(10px, -5px);
+  transition: all 0.3s ease-in-out;
+}
+  
+.hamburger-icon span:first-child {
+  transform: none;
+  transition: all 0.3s ease-in-out;
+}
+  
+.hamburger-icon span:nth-child(2) {
+  opacity: 1;
+  transition: all 0.4s ease-in-out;
+}
+  
+.hamburger-icon span:last-child {
+  transform: none;
+  transition: all 0.3s ease-in-out;
+}
+
+/* SECTIONS */
+
+section{
+  padding-top: 4vh ;
+  height: 96vh;
+  margin: 0 10rem;
+  box-sizing: border-box;
+  min-height: fit-content;
+  /* display: flex; */
+}
+
+/* PROFILE SECTION */
+#profile{
+  display: flex;
+  justify-content: center;
+  gap: 5rem;
+  height: fit-content;
+  text-align: center;
+  flex-wrap: wrap;
+  margin-bottom: 24vh;
+}
+
+.profile-picture{
+  display: flex;
+  height: 400px;
+  /* left: 100px; */
+  width: fit-content;
+  margin: auto 50px;
+  /* flex-wrap: wrap; */
+}
+
+.cm7-pic{
+  border: none;
+  border-radius: 200px;
+}
+
+.cm7-pic:hover{
+  border: 5px solid black;
+  transition: 0.3s;
+}
+
+.profile-text{
+  /* margin-left: 150px; */
+  align-self: center;
+  text-align: center;
+  font-weight: 600;
+  flex-wrap: wrap;
+}
+
+.profile-greet{
+  text-align: center;
+  font-size: 1.75rem;
+  font-weight: lighter;
+  /* margin-bottom: 0.4rem; */
+}
+
+.profile-title{
+  font-size: 4rem;
+  text-align: center;
+  position: relative;
+}
+
+.profile-title::before{
+  position: absolute;
+  content: 'Marwaha';
+  color: rgba(240, 248, 255, 0);
+  margin-left: 1.5rem;
+}
+
+.profile-title:hover{
+  color: rgba(0, 0, 0, 0);
+  transition: 0.3s;
+}
+
+.profile-title:hover:before{
+  color: black;
+  transition: 0.3s;
+}
+
+.profile-main{
+  font-size: 1.5rem;
+  text-align: center;
+  /* margin-top: 0.5rem; */
+  margin-bottom: 2rem;
+}
+
+#social-container{
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+  gap: 1.5rem;
+}
+
+.icon{
+  height: 2rem;
+  cursor: pointer;
+}
+
+/* BUTTONS */
+.profile-btn{
+  justify-content: center;
+  margin-top: 0.5rem;
+}
+
+.btn{
+  font-weight: 600;
+  padding: 1rem;
+  border-radius: 2rem;
+  transition: all 300ms ease;
+  width: 8rem;
+}
+
+.btn:hover{
+  background-color: black;
+  color: white;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+/* EDUCATION */
+#Education{
+  background-color: black;
+  margin: 2rem 0;
+  padding: 2rem;
+  height: fit-content;
+  position: relative;
+}
+
+.edu-title{
+  color: white;
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+/* .edu-title:hover{
+  color: black;
+  background-color: white;
+  transition: 0.5s;
+  border-radius: 1rem;
+} */
+
+.card-container{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  height: fit-content;
+  padding: 1rem;
+  gap: 1rem;
+}
+
+.card{
+  height: 250px;
+  width: 250px;
+  background-color: rgb(30, 29, 29);
+  border-radius: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  padding: 1rem;
+}
+
+.edu-degree{
+  color: white;
+  text-align: center;
+  font-weight: bolder;
+  /* text-decoration: underline; */
+  font-size: 1.5rem;
+}
+
+.institutes{
+  color: white;
+  text-align: center;
+  font-weight: lighter;
+  font-size: 1rem;
+}
+
+.edu-duration{
+  color: white;
+  font-weight: bolder;
+  font-size: 2rem;
+}
+
+.cg{
+  color: white;
+  font-weight: lighter;
+  font-size: 1rem;
+}
+
+.card:hover{
+  transform: scale(1.1);
+  transition: 0.5s;
+  /* cursor: pointer; */
+}
+
+/* PROJECTS */
+
+.swiper {
+  width: 75%;
+  height: 75%;
+  /* margin: 0; */
+  /* padding: 0; */
+}
+
+.swiper-slide {
+  /* padding: 2rem; */
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+.swiper-slide img {
+  display: block;
+  object-fit: cover;
+}
+
+.project-title{
+  text-align: center;
+  font-size: 4rem;
+  margin-bottom: 2rem;
+}
+
+.project-card{
+  color: white;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  background-color: black;
+  border-radius: 10px;
+  padding: 9rem;
+}
+
+.project-card a{
+  color: white;
+  text-decoration: none;
+
+}
+
+.project-card a:hover{
+  text-decoration: underline;
+}
+
+.project-card h2{
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+/* Contact */
+#Contact{
+  background-color: black;
+}
+
+#Contact h1{
+  padding: 3rem 0;
+  text-align: center;
+  font-size: 3rem;
+  color: white;
+}
+
+.contact-me{
+  display: flex;
+  justify-content: space-around;
+  height: fit-content;
+  align-items: center;
+  margin: 0;
+  flex-wrap: wrap;
+  padding: 3rem;
+}
+
+.mail-me h4{
+  font-size: 1.3rem;
+  color: white;
+}
+
+.phone p{
+  font-size: 1.3rem;
+  color: white;
+  font-weight: bolder;
+}
+
+.address p{
+  font-size: 1.3rem;
+  color: white;
+  font-weight: bolder;
+}
